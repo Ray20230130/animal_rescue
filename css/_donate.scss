@@ -1,0 +1,26 @@
+.myDonateHead {
+  padding: 2rem 1rem;
+  text-align: center;
+
+  h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    width: 50%;
+  }
+}
+
+.donate-section03 {
+  margin: 2rem 0 5rem;
+
+  .myDonateBody {
+    .content {
+      background: url(../images/wallMaterial01.png);
+      background-color: #fff;
+    }
+  }
+}

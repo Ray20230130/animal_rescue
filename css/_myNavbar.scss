@@ -1,0 +1,27 @@
+.myNavbar {
+  padding: 1rem 0;
+  background: url(../images/wallMaterial01.png);
+  background-color: #eed;
+  position: sticky;
+  top:0;
+  z-index: 99;
+
+  li>a{
+    &:hover{
+      border-radius: .5rem;
+      background-color: #8a8a5281;
+    }
+  }
+  
+}
+
+@media screen and (max-width:768px) {
+  .myNavbar {  
+    li>a{
+      padding-left: 2rem;
+    }
+    
+  }
+}
+
+

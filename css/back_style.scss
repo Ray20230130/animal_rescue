@@ -1,0 +1,107 @@
+@import "./allUse";
+@import "./B_addnews";
+@import "./myNavbar";
+@import "./footer";
+
+
+.section_Bnews02{
+  padding: 5rem 0 0;
+  position: relative;
+  .mycontainer{
+    // background-color: rgba(165, 42, 42, 0.493);
+    padding: 0 1rem;
+    .headnav{
+      h1{
+        text-align: center;
+        margin-bottom: 2rem;
+        text-shadow: 5px 5px 2px #CCC;
+      }
+      &~a{
+        background-color: #e691224d;
+        color: #000;
+        box-shadow: 2px 2px 5px 2px #0000004f;
+        padding: .8rem;
+        border-radius: .5rem;
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+      }
+    }
+    .page-control{
+      display: flex;
+      justify-content: space-between;
+      .add-news{
+        text-decoration: none;
+        color: #000;
+      }
+      .page{
+        text-align: end;
+        margin-bottom: .5rem;
+        font-size: .7rem;
+        input{
+          width: 4em;
+        }
+        button{
+          padding: .2rem .5rem;
+          font-size: .5rem;
+          background-color: transparent;
+          border: none;
+          &:hover{
+              color: #be5e46;
+          }
+        }
+      }
+  
+    }
+
+    table{
+      thead{
+        tr{
+          th{
+            padding: .5rem 0;
+            text-align: center;
+            background-color: #deb887;
+          }
+        }
+      }
+
+      tbody{
+        tr{
+          border-bottom: 1px solid #000;
+          td{
+            padding: .5rem 1rem;
+            text-align: center;
+            img{
+              width: 100%;
+            }
+            button{
+              border: 2px solid;
+            }
+            .btn-update{
+              &:hover{
+                color: #fff;
+                background-color: #8dbdbe;
+                border: 2px solid #5f9ea0;
+              }
+            }
+            .btn-delete{
+              &:hover{
+                color: #fff;
+                background-color: #be5e46;
+                border: 2px solid #be3f20;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+

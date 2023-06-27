@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/ddoogg.ico" type="image/x-icon">
+  <title>後台管理系統-最新消息</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/back_style.css">
+  <script src="https://kit.fontawesome.com/709b8293ad.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+  <!-- 全體外皮 -->
+  <div class="mainWrap">
+
+    <!-- 001 - 搜尋列 NavBar (Bootstrap) -->
+    <script src="./js/NavBar_content.js"></script>
+
+    <!-- 002 - 後臺資料顯示 -->
+    <section class="section_Bnews02">
+
+      <div class="mycontainer">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <div class="headnav">
+              <h1>後臺管理系統 - 最新消息</h1>
+            </div>
+            <!-- 回到最上頁 -->
+            <a href="#"><i class="fa-solid fa-chevron-up"></i></a>
+            <!-- 新增按鈕 -->
+            <div class="page-control">
+              <a href="./B_addnews.html" class="add-news">
+                新增新聞
+                <i class="fa-regular fa-square-plus"></i>
+              </a>
+
+              <div class="page">
+                <button id="first_page" class="pagebtn"><i class="fa-solid fa-angles-left"></i></button>
+                <button id="prev_page" class="pagebtn"><i class="fa-solid fa-angle-left"></i></button>
+                <button id="next_page" class="pagebtn"><i class="fa-solid fa-angle-right"></i></button>
+                <button id="last_page" class="pagebtn"><i class="fa-solid fa-angles-right"></i></button>
+                <span>
+                  <label for="items_per_page">資料列數：</label>
+                  <select id="items_per_page" name="items-per-page">
+                    <option value="5" selected>5</option>
+                    <option value="10">10</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                </span>
+                <span>
+                  <input id="page_number" type="number" min="1" value="1">
+                  <label id="page_number_label" for="page_number">
+                    <span id="current_page">1</span>/<span id="total_page">XX</span>頁
+                  </label>
+                  <button id="btn_page_number" class="pagebtn">前往</button>
+                </span>
+              </div>
+
+            </div>
+
+            <table id="mytable">
+              <thead>
+                <tr>
+                  <th style="width: 20%;">圖片</th>
+                  <th style="width: 10%;">標題</th>
+                  <th style="width: 40%;">內容</th>
+                  <th style="width: 10%;">連結</th>
+                  <th style="width: 20%;">功能</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td>
+                    <img src="./images/ournews/news001.jpg" alt="">
+                  </td>
+                  <td>海洋保育</td>
+                  <td>
+                    今日，一個由海洋保育組織主辦的活動在沿海地區舉行，旨在提高公眾對海洋保護的意識。志願者們進行了海灘清潔行動，清理了許多塑料垃圾和其他污染物。同時....
+                  </td>
+                  <td>JJJJJJJJJJJJJJJJJJJJJJJJJJJ</td>
+                  <td>
+                    <button class="btn btn-update" type="button" data-bs-toggle="modal"
+                      data-bs-target="#update_news">修改</button>
+                    <button class="btn btn-delete">刪除</button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 003 - 彈出 Model 區 -->
+      <section class="section_Bnews03">
+
+        <!-- 修改的 Modal -->
+        <div class="modal fade" id="update_news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- 頭 -->
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  資料更新
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- 身體 -->
+              <div class="modal-body">
+
+                <div class="item">
+                  <label for="ntitle" class="form-label">新聞標題：</label>
+                  <input type="text" class="form-control" name="ntitle" id="ntitle" placeholder="5~20個字">
+                  <div class="valid-feedback">
+                    符合條件
+                  </div>
+                  <div class="invalid-feedback">
+                    格式不符合條件
+                  </div>
+                </div>
+                <div class="item">
+                  <label for="nhref" class="form-label">連結：</label>
+                  <input type="text" class="form-control" name="nhref" id="nhref" placeholder="10~50個字">
+                  <div class="valid-feedback">
+                    符合條件
+                  </div>
+                  <div class="invalid-feedback">
+                    格式不符合條件
+                  </div>
+
+                </div>
+                <div class="item">
+                  <label for="nimg" class="form-label">新聞圖片地址：</label>
+                  <input type="text" class="form-control" name="nimg" id="nimg" placeholder="10~50個字">
+                  <div class="valid-feedback">
+                    符合條件
+                  </div>
+                  <div class="invalid-feedback">
+                    格式不符合條件
+                  </div>
+
+                </div>
+                <div class="item">
+                  <label for="ncontent" class="form-label">新聞內容：</label>
+                  <textarea class="form-control" name="ncontent" id="ncontent" cols="30" rows="5"
+                    placeholder="20個字以上"></textarea>
+                  <div class="valid-feedback">
+                    符合條件
+                  </div>
+                  <div class="invalid-feedback">
+                    格式不符合條件
+                  </div>
+                </div>
+
+
+              </div>
+              <!-- 腳 -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="update_submit">送出</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- 005 - footer -->
+      <script src="./js/footer_content.js"></script>
+
+  </div>
+
+
+
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-3.6.4.min.js"></script>
+  <script src="./js/back_news.js"></script>
+
+
+</body>
+
+</html>

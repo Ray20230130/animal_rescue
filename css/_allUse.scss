@@ -1,0 +1,32 @@
+// 字體引入
+@font-face {
+  font-family: 'LxgwWenKai';
+  src: url(../ttf/LXGWWenKai-Regular.woff) format("woff"),
+    url(../ttf/LXGWWenKai-Regular.ttf) format("truetype"),
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'LxgwWenKai';
+}
+
+.mainWrap {
+  width: 100%;
+  background: url(../images/wallMaterial01.png);
+  background-color: #eed;
+}
+
+
+
+
+
+
+
+
+
+
+

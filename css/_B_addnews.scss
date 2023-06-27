@@ -1,0 +1,29 @@
+.section-addnews02 {
+  padding: 3rem 0;
+
+  .content {
+    background-color: #b87d104f;
+    padding: .5rem;
+    border-radius: 1rem;
+    a{
+      text-decoration: none;
+      color: #000;
+      &:hover{
+        color: #be5e46;
+      }
+    }
+    h1 {
+      text-align: center;
+      margin: 0rem 0 1.5rem;
+    }
+
+    .item {
+      margin: 1rem 0;
+    }
+
+    .btn-item{
+      text-align: end;
+    }
+
+  }
+}

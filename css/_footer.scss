@@ -1,0 +1,71 @@
+
+.footer {
+  background: url(../images/wallMaterial01.png);
+  background-color: #dbd7ac;
+  margin-top: 5rem;
+
+  .container {
+    padding: 2rem;
+
+    .textBox {
+      padding-bottom: 2rem;
+
+      .textHead {
+        padding-bottom: 1.5rem;
+        border-bottom: 3px double #000;
+        margin-bottom: 1rem;
+
+        .contentL {
+          display: flex;
+          align-items: center;
+
+          .logo {
+            width: 50px;
+            height: 50px;
+            background: url(../images/dogIcon.png) center center / cover;
+            margin-right: 1rem;
+          }
+        }
+
+        .contentR {
+          display: flex;
+          justify-content: end;
+          align-items: center;
+
+          span {
+            font-size: 2rem;
+          }
+
+          a {
+            color: #000;
+            text-decoration: none;
+
+            &:hover {
+              color: brown;
+            }
+
+            i {
+              font-size: 2rem;
+              margin: 0 .5rem;
+            }
+          }
+        }
+      }
+
+      .textBody {
+        .content {
+          div {
+            padding: .5rem 0;
+            margin-bottom: .3rem;
+            border-bottom: 1px solid #000;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      text-align: center;
+    }
+  }
+}
+

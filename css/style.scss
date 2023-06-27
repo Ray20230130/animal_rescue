@@ -1,0 +1,234 @@
+@import "./allUse";
+@import "./myNavbar";
+@import "./donate";
+@import "./news";
+@import "./contact_us";
+@import "./welfare";
+@import "./footer";
+
+.aboutUs {
+  margin: 1.5rem 0;
+  position: relative;
+
+  .container {
+    background: linear-gradient(90deg, #eeeeddd2 50%, transparent 80%) center center / 100% 100%,
+      url(../images/cage004.jpg) right top / cover;
+    min-height: 50vh;
+    padding: 0rem;
+    display: flex;
+
+    .textBox {
+      background-color: #cfbe8596;
+      width: 45%;
+      padding: 1rem;
+
+      h1 {
+        font-weight: 900;
+      }
+
+      p {
+        padding: .5rem;
+        line-height: 2.5rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  ;
+
+  100% {
+    opacity: 1;
+  }
+
+  ;
+}
+
+.fade {
+  animation: fade .5s ease-in-out forwards;
+}
+
+.displayNone {
+  display: none;
+}
+
+.picCarousel {
+  width: 100%;
+  min-height: 20vh;
+  padding: 3rem 0;
+
+  .container {
+    position: relative;
+
+    h2{
+      text-align: center;
+      margin: 3rem 0;
+      font-weight: 900;
+    }
+    button {
+      padding: 1.5rem .7rem;
+      border: none;
+      background-color: #e0e099d8;
+      border-radius: 1rem;
+      position: absolute;
+      top: 50%;
+
+      i {
+        color: #fff;
+        font-weight: 900;
+        font-size: 1.3rem;
+      }
+    }
+
+    #CarouselPrev {
+      left: 0;
+      box-shadow: 8px 8px 12px 2px #c2c2a1;
+    }
+
+    #CarouselNext {
+      right: 0;
+      box-shadow: -8px 8px 12px 2px #c2c2a1;
+    }
+
+    .CarouselContent {
+      width: 80%;
+      margin: 0 auto;
+
+
+      video {
+        width: 100%;
+        height: 50vh;
+      }
+
+      iframe {
+        width: 100%;
+        height: 60vh;
+      }
+
+      .textBox {
+        margin-top: 2rem;
+        h2 {
+          text-align: center;
+        }
+
+        p {
+          padding: 2rem;
+          font-size: 1.1rem;
+          font-weight: 500;
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+.ourBusiness {
+  width: 100%;
+  min-height: 50vh;
+  padding: 2rem 0;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 6rem;
+    font-size: 3.5rem;
+  }
+
+  .container {
+    .row {
+      min-height: 50vh;
+      margin: 3rem 0;
+
+      .ourImg {
+        min-height: 50vh;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 2rem;
+      }
+
+      .ourImg01 {
+        background-image: url(../images/deer001.jpg);
+      }
+      .ourImg02 {
+        background-image: url(../images/chicken001.jpg);
+      }
+      .ourImg03 {
+        background-image: url(../images/cage001.jpg);
+      }
+
+      .textBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+
+        h2 {
+          text-align: center;
+          font-size: 2.5rem;
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 1.1rem;
+          font-weight: 500;
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .aboutUs {
+    .container {
+      background: url(../images/cage004.jpg) right top / cover;
+      padding: 0;
+      display: flex;
+
+      .textBox {
+        background-color: #dddac1ce;
+        width: 100%;
+        margin-left: 0rem;
+        border-radius: 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+      }
+    }
+  }
+
+  .footer {
+    .container {
+      .textBox {
+        .textHead {
+          .contentL {
+            justify-content: center;
+            margin-bottom: 1.5rem;
+          }
+
+          .contentR {
+            justify-content: center;
+          }
+        }
+      }
+
+      .textBody {
+        .content {
+          div {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  // 屁股
+}
