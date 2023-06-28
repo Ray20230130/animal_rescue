@@ -26,15 +26,15 @@
 
       let strHTML = `
       <tr>
-      <td>
+      <td data-th="圖片">
         <img src="${data[index].Nimg}" alt="">
       </td>
-      <td>${data[index].Ntitle}</td>
-      <td>
+      <td data-th="標題">${data[index].Ntitle}</td>
+      <td data-th="內容">
         ${changeContent}
       </td>
-      <td>${data[index].Nhref}</td>
-      <td>
+      <td data-th="連結">${data[index].Nhref}</td>
+      <td data-th="功能">
         <button class="btn btn-update" value="${data[index].ID}" type="button" data-bs-toggle="modal"
         data-bs-target="#update_news">修改</button>
         <button class="btn btn-delete" value="${data[index].ID}">刪除</button>

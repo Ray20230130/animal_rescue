@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "LxgwWenKai";
   src: url(../ttf/LXGWWenKai-Regular.woff) format("woff"), url(../ttf/LXGWWenKai-Regular.ttf) format("truetype");
@@ -15,6 +16,25 @@
   width: 100%;
   background: url(../images/wallMaterial01.png);
   background-color: #eed;
+}
+
+.section_login02 .content {
+  margin: 5rem 0 12rem;
+  padding: 1rem 1rem;
+  background-color: rgba(214, 157, 71, 0.3137254902);
+  border-radius: 1rem;
+}
+.section_login02 .content h1 {
+  text-align: center;
+  text-shadow: 3px 3px 3px #ccc;
+  margin-bottom: 3rem;
+}
+.section_login02 .content .item {
+  margin: 1rem 0;
+}
+.section_login02 .content .btn-item {
+  text-align: end;
+  margin: 2rem 0 1rem;
 }
 
 .section-addnews02 {
@@ -51,6 +71,29 @@
   top: 0;
   z-index: 99;
 }
+.myNavbar .login-box .login-btn {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #525241;
+  padding: 0.5rem 1rem;
+}
+.myNavbar .login-box .login-btn:hover {
+  border-radius: 0.5rem;
+  background-color: rgba(138, 138, 82, 0.5058823529);
+}
+.myNavbar .logout-box .logout-btn {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #d87300;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  box-shadow: 2px 2px 6px 3px #ccc;
+  border-radius: 0.5rem;
+}
+.myNavbar .logout-box .logout-btn:hover {
+  background-color: rgba(172, 59, 6, 0.3960784314);
+  color: #000;
+}
 .myNavbar li > a:hover {
   border-radius: 0.5rem;
   background-color: rgba(138, 138, 82, 0.5058823529);
@@ -59,6 +102,11 @@
 @media screen and (max-width: 768px) {
   .myNavbar li > a {
     padding-left: 2rem;
+  }
+  .login-box .login-btn {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
 }
 .footer {
@@ -189,4 +237,75 @@
   color: #fff;
   background-color: #be5e46;
   border: 2px solid #be3f20;
+}
+
+.section_Bnews03 .my-model .my-modelheader {
+  background-color: rgba(95, 158, 160, 0.7725490196);
+  color: #fff;
+}
+.section_Bnews03 .my-model .my-modelbody .item {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section_Bnews02 {
+    padding: 5rem 0 0;
+    position: relative;
+  }
+  .section_Bnews02 .mycontainer {
+    padding: 0 1rem;
+  }
+  .section_Bnews02 .mycontainer .headnav ~ a {
+    padding: 0.4rem 0.8rem;
+  }
+  .section_Bnews02 .mycontainer .page-control {
+    display: block;
+    text-align: center;
+  }
+  .section_Bnews02 .mycontainer .page-control .add-news {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  .section_Bnews02 .mycontainer .page-control .page {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+  }
+  .section_Bnews02 .mycontainer .page-control .page input {
+    width: 4em;
+  }
+  .section_Bnews02 .mycontainer .page-control .page button {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.5rem;
+    background-color: transparent;
+    border: none;
+  }
+  .section_Bnews02 .mycontainer .page-control .page button:hover {
+    color: #be5e46;
+  }
+  .section_Bnews02 .mycontainer .page-control .page .ahead-box {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  .section_Bnews02 .mycontainer table thead {
+    display: none;
+  }
+  .section_Bnews02 .mycontainer table tbody tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .section_Bnews02 .mycontainer table tbody tr td::before {
+    content: attr(data-th);
+    display: block;
+    width: 4em;
+    margin: 0.5rem auto;
+    background-color: rgba(240, 193, 131, 0.3843137255);
+    border-radius: 0.5rem;
+  }
+  .section_Bnews02 .mycontainer table tbody tr td img {
+    width: 80%;
+  }
+  .section_Bnews02 .mycontainer table tbody tr td[data-th=功能] button {
+    margin: 1rem 0;
+  }
 }/*# sourceMappingURL=back_style.css.map */

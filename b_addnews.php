@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['username']))
+  header('Location: login.php');
+  // echo $_SESSION["lastlogintime"];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,14 +28,14 @@
   <div class="mainWrap">
 
     <!-- 001 - 搜尋列 NavBar (Bootstrap) -->
-    <script src="./js/NavBar_content.js"></script>
+    <script src="./js/B_NavBar_content.js"></script>
 
     <!-- 002 - 新增表格 -->
     <section class="section-addnews02">
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2 content">
-            <a href="./back_news.html" class="content-nav">
+            <a href="./back_news.php" class="content-nav">
               <i class="fa-solid fa-right-to-bracket"></i> 回後台
             </a>
             <h1>新增消息</h1>

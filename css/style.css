@@ -26,6 +26,29 @@
   top: 0;
   z-index: 99;
 }
+.myNavbar .login-box .login-btn {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #525241;
+  padding: 0.5rem 1rem;
+}
+.myNavbar .login-box .login-btn:hover {
+  border-radius: 0.5rem;
+  background-color: rgba(138, 138, 82, 0.5058823529);
+}
+.myNavbar .logout-box .logout-btn {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #d87300;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  box-shadow: 2px 2px 6px 3px #ccc;
+  border-radius: 0.5rem;
+}
+.myNavbar .logout-box .logout-btn:hover {
+  background-color: rgba(172, 59, 6, 0.3960784314);
+  color: #000;
+}
 .myNavbar li > a:hover {
   border-radius: 0.5rem;
   background-color: rgba(138, 138, 82, 0.5058823529);
@@ -34,6 +57,11 @@
 @media screen and (max-width: 768px) {
   .myNavbar li > a {
     padding-left: 2rem;
+  }
+  .login-box .login-btn {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
 }
 .myDonateHead {
@@ -333,7 +361,7 @@
 }
 .picCarousel .container h2 {
   text-align: center;
-  margin: 3rem 0;
+  margin: 1rem 0 2rem;
   font-weight: 900;
 }
 .picCarousel .container button {
@@ -367,13 +395,14 @@
 }
 .picCarousel .container .CarouselContent iframe {
   width: 100%;
-  height: 60vh;
+  height: 50vh;
 }
 .picCarousel .container .CarouselContent .textBox {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 .picCarousel .container .CarouselContent .textBox h2 {
   text-align: center;
+  margin: 1rem 0;
 }
 .picCarousel .container .CarouselContent .textBox p {
   padding: 2rem;
@@ -443,6 +472,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .picCarousel .container .textBox p {
+    padding: 0.5rem;
   }
   .footer .container .textBox .textHead .contentL {
     justify-content: center;

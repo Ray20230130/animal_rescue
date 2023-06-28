@@ -6,6 +6,36 @@
   top:0;
   z-index: 99;
 
+  .login-box{
+    .login-btn{
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #525241;
+      padding: .5rem 1rem;
+      &:hover{
+        border-radius: .5rem;
+        background-color: #8a8a5281;
+      }
+    }
+  }
+
+  .logout-box{
+    .logout-btn{
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #d87300;
+      font-weight: 500;
+      padding: .5rem 1rem;
+      box-shadow: 2px 2px 6px 3px #ccc;
+      border-radius: .5rem;
+      &:hover{
+        background-color: #ac3b0665;
+        color: #000;
+      }
+    }
+  }
+
+
   li>a{
     &:hover{
       border-radius: .5rem;
@@ -22,6 +52,16 @@
     }
     
   }
+
+  .login-box{
+    .login-btn{
+      display: block;
+      text-align: center;
+      margin-bottom: .5rem;
+    }
+  }
+
+
 }
 
 

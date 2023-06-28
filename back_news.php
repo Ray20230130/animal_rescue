@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['username']))
+  header('Location: login.php');
+// echo $_SESSION["lastlogintime"];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +29,7 @@
   <div class="mainWrap">
 
     <!-- 001 - 搜尋列 NavBar (Bootstrap) -->
-    <script src="./js/NavBar_content.js"></script>
+    <script src="./js/B_NavBar_content.js"></script>
 
     <!-- 002 - 後臺資料顯示 -->
     <section class="section_Bnews02">
@@ -36,17 +44,19 @@
             <a href="#"><i class="fa-solid fa-chevron-up"></i></a>
             <!-- 新增按鈕 -->
             <div class="page-control">
-              <a href="./B_addnews.html" class="add-news">
+              <a href="./b_addnews.php" class="add-news">
                 新增新聞
                 <i class="fa-regular fa-square-plus"></i>
               </a>
 
               <div class="page">
-                <button id="first_page" class="pagebtn"><i class="fa-solid fa-angles-left"></i></button>
-                <button id="prev_page" class="pagebtn"><i class="fa-solid fa-angle-left"></i></button>
-                <button id="next_page" class="pagebtn"><i class="fa-solid fa-angle-right"></i></button>
-                <button id="last_page" class="pagebtn"><i class="fa-solid fa-angles-right"></i></button>
-                <span>
+                <span class="btn-box">
+                  <button id="first_page" class="pagebtn"><i class="fa-solid fa-angles-left"></i></button>
+                  <button id="prev_page" class="pagebtn"><i class="fa-solid fa-angle-left"></i></button>
+                  <button id="next_page" class="pagebtn"><i class="fa-solid fa-angle-right"></i></button>
+                  <button id="last_page" class="pagebtn"><i class="fa-solid fa-angles-right"></i></button>
+                </span>
+                <span class="item-num-box">
                   <label for="items_per_page">資料列數：</label>
                   <select id="items_per_page" name="items-per-page">
                     <option value="5" selected>5</option>
@@ -56,7 +66,7 @@
                     <option value="100">100</option>
                   </select>
                 </span>
-                <span>
+                <span class="ahead-box">
                   <input id="page_number" type="number" min="1" value="1">
                   <label id="page_number_label" for="page_number">
                     <span id="current_page">1</span>/<span id="total_page">XX</span>頁
@@ -80,17 +90,16 @@
               <tbody>
 
                 <tr>
-                  <td>
+                  <td data-th="圖片">
                     <img src="./images/ournews/news001.jpg" alt="">
                   </td>
-                  <td>海洋保育</td>
-                  <td>
+                  <td data-th="標題">海洋保育</td>
+                  <td data-th="內容">
                     今日，一個由海洋保育組織主辦的活動在沿海地區舉行，旨在提高公眾對海洋保護的意識。志願者們進行了海灘清潔行動，清理了許多塑料垃圾和其他污染物。同時....
                   </td>
-                  <td>JJJJJJJJJJJJJJJJJJJJJJJJJJJ</td>
-                  <td>
-                    <button class="btn btn-update" type="button" data-bs-toggle="modal"
-                      data-bs-target="#update_news">修改</button>
+                  <td data-th="連結">JJJJJJJJJJJJJJJJJJJJJJJJJJJ</td>
+                  <td data-th="功能">
+                    <button class="btn btn-update" type="button" data-bs-toggle="modal" data-bs-target="#update_news">修改</button>
                     <button class="btn btn-delete">刪除</button>
                   </td>
                 </tr>
@@ -107,16 +116,16 @@
         <!-- 修改的 Modal -->
         <div class="modal fade" id="update_news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content my-model">
               <!-- 頭 -->
-              <div class="modal-header">
+              <div class="modal-header my-modelheader">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  資料更新
+                  資 料 更 新
                 </h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <!-- 身體 -->
-              <div class="modal-body">
+              <div class="modal-body my-modelbody">
 
                 <div class="item">
                   <label for="ntitle" class="form-label">新聞標題：</label>
@@ -152,8 +161,7 @@
                 </div>
                 <div class="item">
                   <label for="ncontent" class="form-label">新聞內容：</label>
-                  <textarea class="form-control" name="ncontent" id="ncontent" cols="30" rows="5"
-                    placeholder="20個字以上"></textarea>
+                  <textarea class="form-control" name="ncontent" id="ncontent" cols="30" rows="5" placeholder="20個字以上"></textarea>
                   <div class="valid-feedback">
                     符合條件
                   </div>
