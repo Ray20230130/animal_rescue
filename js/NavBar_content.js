@@ -24,9 +24,9 @@ let navBar = `
           相關計畫
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">救助計畫</a></li>
-          <li><a class="dropdown-item" href="#">助養計畫</a></li>
-          <li><a class="dropdown-item" href="#">生命教育</a></li>
+          <li><a class="dropdown-item disabled" href="#">救助計畫</a></li>
+          <li><a class="dropdown-item disabled" href="#">助養計畫</a></li>
+          <li><a class="dropdown-item disabled" href="#">生命教育</a></li>
           <li>
             <hr class="dropdown-divider">
           </li>
